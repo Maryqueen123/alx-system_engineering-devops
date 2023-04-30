@@ -1,18 +1,17 @@
-#!/bin/bash
-# Using if and while statement constrcut to print
+#!/usr/bin/env bash
+# displays Best School 10 times.
 
-count=1
-
-while [ $count -le 10 ]
+COUNTER=1
+while [ $COUNTER -lt 11 ]
 do
-  if [ $count -eq 4 ]
-  then
-    echo "bad luck"
-  elif [ $count -eq 8 ]
-  then
-    echo "good luck"
-  else
-    echo "Best School"
-  fi
-  count=$((count+1))
+    if [ $COUNTER = 4 ]
+    then
+        echo "bad luck"
+    elif [ $COUNTER = 8 ]
+    then
+        echo "good luck"
+    else
+        echo "Best School"
+    fi
+    ((COUNTER+=1))
 done
