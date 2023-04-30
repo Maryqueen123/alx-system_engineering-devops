@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# displays the content of the current working directory.
+
+
+for file in *-*
+do
+  if [[ ! "$file" == .* && ! -d "$file" ]]
+  then
+    echo "${file#*-}"
+  fi
+done
